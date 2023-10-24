@@ -137,6 +137,7 @@ img {
     <div id="mov"><p>movies</p></div>
     <div class="movie">
     <% movies.map((x) => { %>
+        <% if (x.year > 2000){ %>
             <!-- <div><img src=<%= x.imageurl %> alt=""></div>
             <div><%= x.title %></div>
             <div><%= x.genre %></div>
@@ -150,13 +151,15 @@ img {
                   <div class="poster__info">
                     <h1 class="poster__title"><%= x.title %></h1>
                     <p class="poster__text"><%= x.synopsis %></p>
+                    <p><%= x.description %></p>
+                    <p><%= x.year %></p>
                   </div>
                 </div>
                 <div>
                 <a href="#">Find out more</a>
             </div>
               </div>
-    
+              <% } %>
     <% }) %>
 </div>
 </body>
